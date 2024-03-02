@@ -25,19 +25,38 @@ To perform training you need to download the following files from [here]() and p
 The `data` folder should look like this:
 ```
 data
-|-- checkpoints
-|   `-- Kinetics
-|       `-- SLOWFAST_8x8_R50.pkl
-|-- config
-|   `-- SLOWFAST_8x8_R50.yaml
-|-- dataframes
-|   |-- encodes_dataframe.csv
-|   `-- videos_dataframe.csv
-`-- features
-    |-- deep_features
-    |   |-- spatial_features
-    |   `-- temporal_features 
-    `-- fused_features
+├── checkpoints
+│   └── Kinetics
+│       └── SLOWFAST_8x8_R50.pkl
+├── config
+│   └── SLOWFAST_8x8_R50.yaml
+├── dataframes
+│   ├── encodes_dataframe.csv
+│   └── videos_dataframe.csv
+└── features
+    ├── deep_features
+    │   ├── spatial_features
+    │   │   ├── inception_v3
+    │   │   │   └── Mixed_7c.cat_2
+    │   │   │       └── mean_std
+    │   │   ├── resnet50
+    │   │   │   └── layer4.2.relu_2
+    │   │   │       └── mean_std
+    │   │   └── vgg16
+    │   │       └── features.29
+    │   │           └── mean_std
+    │   └── temporal_features
+    │       └── slowfast
+    └── fused_features
+        ├── inception_v3_Mixed_7c.cat_2_mean_std__resnet50_layer4.2.relu_2_mean_std__slowfast
+        ├── inception_v3_Mixed_7c.cat_2_mean_std__resnet50_layer4.2.relu_2_mean_std__vgg16_features.29_mean_std__slowfast
+        ├── inception_v3_Mixed_7c.cat_2_mean_std__slowfast
+        ├── inception_v3_Mixed_7c.cat_2_mean_std__vgg16_features.29_mean_std__slowfast
+        ├── resnet50_layer4.2.relu_2_mean_std
+        ├── resnet50_layer4.2.relu_2_mean_std__slowfast
+        ├── resnet50_layer4.2.relu_2_mean_std__vgg16_features.29_mean_std__slowfast
+        ├── slowfast
+        └── vgg16_features.29_mean_std__slowfast
 ```
 
 After downloading the data, you can run the following command to train the model on the extracted spatial and temporal features:
