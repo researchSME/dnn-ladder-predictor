@@ -1,6 +1,6 @@
 # Predicting bitrate ladder using pre-trained DNN features
 
-This Repository contains code and data relating to the paper "**Efficient Bitrate Ladder Construction using Transfer Learning and Spatio-Temporal Features**"
+This Repository contains code and data relating to the "**Efficient Bitrate Ladder Construction using Transfer Learning and Spatio-Temporal Features**" paper.
 
 ## Prerequisites 
 To install the prerequisites on `Ubuntu:20:04` using `miniconda3:23.10.0-1` run the following:
@@ -21,6 +21,24 @@ To perform training you need to download the following files from [here]() and p
 1. Download the Slowfast model weights (`SLOWFAST_8x8_R50.pkl`) and store it under `data/checkpoints/Kinetics`.
 2. Download the video (`videos_dataframe.csv`) and encode (`encodes_dataframe.csv`) information tables and store them under `data/dataframes`.
 3. Download and extract the DNN features (`features.tar.gz`) and store them under `data/features`.
+
+The `data` folder should look like this:
+```
+data
+|-- checkpoints
+|   `-- Kinetics
+|       `-- SLOWFAST_8x8_R50.pkl
+|-- config
+|   `-- SLOWFAST_8x8_R50.yaml
+|-- dataframes
+|   |-- encodes_dataframe.csv
+|   `-- videos_dataframe.csv
+`-- features
+    |-- deep_features
+    |   |-- spatial_features
+    |   `-- temporal_features 
+    `-- fused_features
+```
 
 After downloading the data, you can run the following command to train the model on the extracted spatial and temporal features:
 ```shell
