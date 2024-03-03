@@ -16,7 +16,7 @@ conda activate torch_env
 You might need to change `prefix:` in both `env_part01.yml` and `env_part02_yml` based on the installation directory of `conda`.
 
 ## How to train
-To perform training you need to download the following files from [here]() and put them into the repository:
+To perform training you need to download the following files from [here](https://drive.google.com/drive/folders/1kOMgM_OQifytIzXmcNnXAvhXkZtkLJHF?usp=sharing) and put them into the repository:
 
 1. Download the Slowfast model weights (`SLOWFAST_8x8_R50.pkl`) and store it under `data/checkpoints/Kinetics`.
 2. Download the video (`videos_dataframe.csv`) and encode (`encodes_dataframe.csv`) information tables and store them under `data/dataframes`.
