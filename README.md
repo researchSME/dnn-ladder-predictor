@@ -1,6 +1,9 @@
 # Predicting bitrate ladder using pre-trained DNN features
 
-This Repository contains code and data relating to the "**Efficient Bitrate Ladder Construction using Transfer Learning and Spatio-Temporal Features**" paper.
+This Repository contains code and data relating to the "**Efficient Bitrate Ladder Construction using Transfer Learning and Spatio-Temporal Features**" paper, presented in IEEE MVIP 2024.
+
+## Paper
+The paper is available on [IEEEXplore](https://ieeexplore.ieee.org/document/10491154). A preprint is available [here](https://arxiv.org/abs/2401.03195).
 
 ## Prerequisites 
 To install the prerequisites on `Ubuntu:20:04` using `miniconda3:23.10.0-1` run the following:
@@ -72,3 +75,6 @@ The inference outputs will be stored in `data/results/inference`. Finally, you c
 python3 src/bitrate_ladder_constructor.py
 ```
 The final result tables will be stored in `data/results/final`.
+
+## Project information
+This repository is associated with Work Package 2 (WP2) of the project [FALCON](https://www.tuni.fi/en/research/falcon). This project has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 101022466.
